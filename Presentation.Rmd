@@ -1,0 +1,60 @@
+---
+title: "Presentation"
+author: "Wuji Shan"
+date: "10/8/2021"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+pacman::p_load("tidyverse","ggplot2","dplyr")
+```
+
+## Data Selection
+
+I selected two datasets from Gapminder: The number of children that would be born to each woman, and life expectancy at birth for female.  
+I explored female fertility and life expectancy between United States & Mali, and between China & India. In addition to these two comparing graphs, I also made a graph to explore the general relationship between female fertility and life expectancy in 200 countries from 1949 to 2098.
+
+```{r, include=FALSE,echo=FALSE}
+source("wrangling_code.R", echo=TRUE)
+source("visualization_function.R", echo=TRUE)
+```
+
+## Observation1: United States v.s. Mali
+
+This plot compares female fertility and life expectancy between United States and Mali.
+```{r, echo=FALSE}
+dv(fertility_life, "United States", "Mali")
+```
+
+The graph suggests that the general female fertility in Mali is much higher than that in United States, and Mali's general female life expectancy is much lower than that of United States.  
+Actually, we can also observe that the line of United States has some unusual fluctuation, which may happen because of some other factors except for fertility.
+
+## Observation 2
+
+This plot compares female fertility and life expectancy between China and India.
+```{r, echo=FALSE}
+dv(fertility_life, "China", "India")
+```
+
+The comparison between China and India suggests that these two countries have closer female fertility and life expectanct data during these years than the first comparison. During life_expectancy 45-70 data group, Chinese general female fertility is higher than that in India, and during 70-85 group, Indian general female fertility is higher than that in China.
+Actually, we can also observe that the line of China has some unusual fluctuation, which may happen because of some other factors except for fertility.
+
+
+## Additional graph (In addition to two subsets comparison)
+
+Although only two plots are required, I still want to spend some time explaining this plot, which explores the general relationship between female fertility and life expectancy in 200 countries from 1949 to 2098.
+```{r, echo=FALSE}
+dv2(fertility_life)
+```
+
+Here, we can observe a general pattern that the lower female fertility is, the higher female life expectancy is, but we cannot suggest its absolutely causal relationship because of possible existence of other factors.
+
+
+## Conclusion: 
+
+The conclusion is there does seem to be a relationship between female fertility and female life expectancy.
+However, the female life expectancy may be affected by many other factors, such as income, medical level, and welfare.  
+Therefore, before we can state that there is a causal relationship between female fertility and life expectancy, we still need to explore some other factors and models.

@@ -22,3 +22,6 @@ life_pivot <- life %>%
 
 # get the join dataset which contains all matched countries and years of fertility and life
 fertility_life <- inner_join(life_pivot, fertility_pivot, by = c("country", "years"))
+fertility_life <- na.omit(fertility_life)
+
+# fertility_life dataset has totally 30000 observations, and 4 variables.
