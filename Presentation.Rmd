@@ -22,7 +22,7 @@ source("wrangling_code.R", echo=TRUE)
 source("visualization_function.R", echo=TRUE)
 ```
 
-## Observation1: United States v.s. Mali
+## Observation1: United States v.s. Mali.
 
 This plot compares female fertility and life expectancy between United States and Mali.
 ```{r, echo=FALSE}

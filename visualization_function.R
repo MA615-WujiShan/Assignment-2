@@ -11,7 +11,7 @@ dv <- function(data, country1, country2){
     geom_line()
 }
 
-# dv2 is to explore the the correlation of life expentancy of female and fertility in the world in these years
+# dv2 is to explore the the correlation of life expentancy of female and fertility in the world in these years.
 dv2 <- function(data){
   # data = fertility_life
   data %>%

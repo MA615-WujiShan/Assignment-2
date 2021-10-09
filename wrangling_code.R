@@ -16,7 +16,7 @@ new_fertility <- subset(fertility, select = -c(2:151, 302))
 fertility_pivot <- new_fertility %>% 
   pivot_longer(-country, names_to = "years", values_to = "fertility")
 
-# tidy life dataset
+# tidy life dataset.
 life_pivot <- life %>%
   pivot_longer(-country, names_to = "years", values_to = "life")
 
