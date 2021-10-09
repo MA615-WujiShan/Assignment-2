@@ -22,7 +22,7 @@ source("wrangling_code.R", echo=TRUE)
 source("visualization_function.R", echo=TRUE)
 ```
 
-## Observation1: United States v.s. Mali.
+## Observation1: United States v.s. Mali
 
 This plot compares female fertility and life expectancy between United States and Mali.
 ```{r, echo=FALSE}
@@ -32,7 +32,7 @@ dv(fertility_life, "United States", "Mali")
 The graph suggests that the general female fertility in Mali is much higher than that in United States, and Mali's general female life expectancy is much lower than that of United States.  
 Actually, we can also observe that the line of United States has some unusual fluctuation, which may happen because of some other factors except for fertility.
 
-## Observation 2
+## Observation 2: China v.s. India
 
 This plot compares female fertility and life expectancy between China and India.
 ```{r, echo=FALSE}
