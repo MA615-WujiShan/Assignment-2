@@ -9,7 +9,7 @@ output:
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-pacman::p_load("tidyverse","ggplot2","dplyr")
+pacman::p_load("tidyverse","ggplot2","dplyr","directlabels")
 ```
 
 ## Data Selection
@@ -17,7 +17,7 @@ pacman::p_load("tidyverse","ggplot2","dplyr")
 I selected two datasets from Gapminder: The number of children that would be born to each woman, and life expectancy at birth for female.  
 I explored female fertility and life expectancy between United States & Mali, and between China & India. In addition to these two comparing graphs, I also made a graph to explore the general relationship between female fertility and life expectancy in 200 countries from 1949 to 2098.
 
-```{r, include=FALSE,echo=FALSE}
+```{r, include=FALSE,echo=FALSE,warning=FALSE}
 source("wrangling_code.R", echo=TRUE)
 source("visualization_function.R", echo=TRUE)
 ```
@@ -25,7 +25,7 @@ source("visualization_function.R", echo=TRUE)
 ## Observation1: United States v.s. Mali
 
 This plot compares female fertility and life expectancy between United States and Mali.
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning=FALSE}
 dv(fertility_life, "United States", "Mali")
 ```
 
@@ -35,7 +35,7 @@ Actually, we can also observe that the line of United States has some unusual fl
 ## Observation 2: China v.s. India
 
 This plot compares female fertility and life expectancy between China and India.
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning=FALSE}
 dv(fertility_life, "China", "India")
 ```
 
@@ -46,7 +46,7 @@ Actually, we can also observe that the line of China has some unusual fluctuatio
 ## Additional graph (In addition to two subsets comparison)
 
 Although only two plots are required, I still want to spend some time explaining this plot, which explores the general relationship between female fertility and life expectancy in 200 countries from 1949 to 2098.
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning=FALSE}
 dv2(fertility_life)
 ```
 
